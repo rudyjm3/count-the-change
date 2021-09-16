@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Count The Chnage - JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Sigmar+One&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+  
+  <div class="wrapper">
+     <!-- INPUT MONEY AMOUNTS SECTION - LEFT -->
+     <div class="money-input-col left-col">
+        <div class="change-col">
+           <h2 class="change-title">Enter your change</h2>
+            <label for="penny">Pennies <br><input type="number" name="penny" id="penny" min="0" step="1" placeholder="0" onkeyup="calculate()"> <span class="penny-total"></span></label>
+
+            <label for="nickle">Nickles <br><input type="number" name="nickle" id="nickle" min="0" step="1" placeholder="0" onkeyup="calculate()"> <span class="nickle-total"></span></label>
+
+            <label for="dime">Dimes <br><input type="number" name="dime" id="dime" step="1" placeholder="0" onkeyup="calculate()"> <span class="dime-total"> </span></label>
+
+            <label for="quarter">Quarters <br><input type="number" name="quarter" id="quarter" step="1" placeholder="0" onkeyup="calculate()"> <span class="quarter-total"> </span></label>
+        </div>
+
+        <hr>
+
+        <div class="bills-col">
+         <h2 class="bills-title">Enter your bills</h2>
+           <label for="dollar">One Dollar<br><input type="number" name="dollar" id="dollar" step="1" placeholder="0" onkeyup="calculate()"> <span class="dollar-total"> </span></label>
+
+           <label for="five-dollar">Five Dollar<br><input type="number" name="five-dollar" id="five-dollar" step="1" placeholder="0" onclick="calculate()"> <span class="five-dollar-total"> </span></label>
+        </div>
+        <button class="calc-btn" type="button" value="Get Total" onclick="calculate()">Get Total</button>
+     </div>
+
+     <!-- OUT PUT MONEY TOTAL SECTION - RIGHT -->
+     <div class="total-output-col right-col">
+        <p>Total Money: <span id="calculated-amount" value="0"></span></p>
+         <button class="save-total-btn" type="button" value="Save total" onclick="">Save Total</button>
+     </div>
+  </div>
+  
+  
+  
+  <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Sigmar One', cursive;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: rgb(201, 201, 201);
+}
+.wrapper{
+   display: flex;
+   justify-content: center;
+   /*align-items: center;*/
+   width: 100%;
+}
+
+.left-col,.right-col{
+   /*background-color: red;*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /*flex-direction: column;*/
+   padding: 10px;
+   width: 40%;
+   /*height: 500px;*/
+   text-align: center;
+   border-radius: 5px;
+   border: 2px solid red;
+   margin: 0 10px;
+   background-color: rgb(175, 175, 175);
+}
+hr{
+   margin: 20px 0;
+   width: 90%;
+}
+button{
+   width: 80%;
+   height: 40px;
+   margin: 15px 0;
+   font-weight: 600;
+   font-size: 20px;
+   border-radius: 5px;
+   padding: 5px;
+}
+.money-input-col{
+   display:flex;
+   flex-direction: column;
+   width: fit-content;
+}
+.total-output-col{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 30%;
+   /*padding: 50px 0;*/ 
+   color: #333;
+   /*background-color: white;*/
+
+}
+.change-col{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+}
+.bills-col{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   /*background-color: yellow;*/
+}
+.change-col .change-title{
+   font-size: 20px;
+   width: 100%;
+   margin: 15px 0;
+   flex-grow: 1;
+}
+.bills-col .bills-title{
+   font-size: 20px;
+   width: 100%;
+   margin: 15px 0;
+   flex-grow: 1;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+label{
+   font-size: 20px;
+   color: rgb(48, 48, 48);
+}
+input{
+   width: 50px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: 25px;
+   border: none;
+   border-radius: 5px;
+   padding: 4px;
+   margin: 5px 0;
+}
+input:focus{
+   /*outline: solid 2px #8dc63f;
+   border-radius: 5px; */
+   outline-color: #719ECE;
+}
+.total-output > p{
+   font-family: 'Sigmar One', cursive;
+   font-weight: 500;
+   font-size: 20px;
+}
+#calculated-amount{
+   font-family: 'Sigmar One', cursive;
+   font-size: 35px;
+   font-weight: 500;
+   color: rgb(52, 189, 52);
+}
+.currentcey-symbol{
+   font-family: 'Sigmar One', cursive;
+   font-size: 30px;
+   font-weight: 500;
+}
+/* HIDE INPUT SPANS FOR NOW */
+.penny-total,
+.nickle-total,
+.dime-total,
+.quarter-total,
+.dollar-total,
+.five-dollar-total{
+   display: none;
+}
