@@ -22,14 +22,15 @@ function calculate(){
    let fiveDollar = document.getElementById('five-dollar').value * 5.00.toFixed(2);
    let total = (penny + nickle + dime + quarter + oneDollar + fiveDollar).toFixed(2);
 
-//== UPDATE SPAN NEXT TO INPUT WITH MONEY TOTAL FOR JUST THAT INPUT ==
-   // document.getElementsByClassName('penny-total')[0].innerHTML = "X .01 = $" +  penny;
-   // document.getElementsByClassName('nickle-total')[0].innerHTML = "X .05 = $" +  nickle;
-   // document.getElementsByClassName('dime-total')[0].innerHTML = "X .10 = $" +  dime;
-   // document.getElementsByClassName('quarter-total')[0].innerHTML = "X .25 = $" +  quarter;
-   // document.getElementsByClassName('dollar-total')[0].innerHTML = "X 1.00 = $" +  oneDollar;
-   // document.getElementsByClassName('five-dollar-total')[0].innerHTML = "X 5.00 = $" +  fiveDollar;
-
+   function not(){
+      //== UPDATE SPAN NEXT TO INPUT WITH MONEY TOTAL FOR JUST THAT INPUT ==
+      // document.getElementsByClassName('penny-total')[0].innerHTML = "X .01 = $" +  penny;
+      // document.getElementsByClassName('nickle-total')[0].innerHTML = "X .05 = $" +  nickle;
+      // document.getElementsByClassName('dime-total')[0].innerHTML = "X .10 = $" +  dime;
+      // document.getElementsByClassName('quarter-total')[0].innerHTML = "X .25 = $" +  quarter;
+      // document.getElementsByClassName('dollar-total')[0].innerHTML = "X 1.00 = $" +  oneDollar;
+      // document.getElementsByClassName('five-dollar-total')[0].innerHTML = "X 5.00 = $" +  fiveDollar;
+   }
 
    document.getElementById('calculated-amount').innerHTML = `<span class="currentcey-symbol">$</span>${total}`;
 
@@ -41,6 +42,11 @@ function calculate(){
    }
  
 }
+
+// GET CURRENT DATE AND TIME
+var today = new Date();
+var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+console.log(today);
 
 // ARRAY   
 let x = 0;
@@ -66,7 +72,7 @@ function display_totals(){
    for (var y=0; y<saved_Money.length; y++)
    
    {
-     e += "Element " + y + " = " + saved_Money[y] + "<br/>";
+     e += "Element " + y + " = " + saved_Money[y] + "<br/>" + today + "<br/>";
      console.log(y + "This is Y's current index");
      console.log(saved_Money + " <=== Whats in the array");
    }
