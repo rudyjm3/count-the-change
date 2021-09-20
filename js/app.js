@@ -53,35 +53,32 @@ function calculate(){
 
 // ARRAY   
 let x = 0;
-// ARRAY TO ADD MONEY SAVED TO.
-let saved_Money = new Array();
-console.log(saved_Money);
-let displayValue = document.getElementById('calculated-amount');
-   if (displayValue) {
-      let value = displayValue.getAttribute('value');
-      console.log("2This is the value " + value);
-   }
+// DEFINE ARRAY MONEY TOTAL WILL BE SAVED TO.
+let saved_Money = Array();
 
 function saveTotal() {
-   let displayValue = document.getElementById('calculated-amount').getAttribute('value');
-   console.log("Saved total fun " + displayValue);
+   //Get the value 
+    let displayValue = document.getElementById('calculated-amount').getAttribute('value');
+    console.log("Saved total function " + displayValue);
    
+   // Save value to array, assign index number "x" then increment 1 for next index. 
    saved_Money[x] = displayValue;
-   alert(`Element: " ${saved_Money[x]} Added to savedMoney array ${x}`);
+   alert(`$ ${saved_Money[x]} has been saved to savedMoney array. Index= ${x}`);
    x++;
-   //document.getElementById('calculated-amount').value = "";
-   console.log(saved_Money);
+   //Clear value from element.
+   document.getElementById('calculated-amount').value = "";
 }
 
-function display_totals()
-{
-   var e = "<hr/>";   
-    console.log(e);
+function display_totals(){
+   let e = "<hr/>";   
+    
    for (var y=0; y<saved_Money.length; y++)
-   console.log(y);
+   
    {
      e += "Element " + y + " = " + saved_Money[y] + "<br/>";
+     console.log(y + "This is Y's current index");
+     console.log(saved_Money + " <=== Whats in the array");
    }
-   document.getElementById('display-totals').TEXT_NODE = e;
-
+   document.getElementById('display-saved-totals').innerHTML = e;
+   console.log(e + " <== This is E which is suppose to be from array");
 }

@@ -120,11 +120,11 @@ input:focus{
    border-radius: 5px; */
    outline-color: #719ECE;
 }
-.total-output > p{
+/*.total-output > p{
    font-family: 'Sigmar One', cursive;
    font-weight: 500;
    font-size: 20px;
-}
+}*/
 #calculated-amount{
    font-family: 'Sigmar One', cursive;
    font-size: 35px;
