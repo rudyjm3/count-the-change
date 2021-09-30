@@ -45,8 +45,8 @@ function calculate(){
 
 // GET CURRENT DATE AND TIME
 var today = new Date();
-var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
-console.log(today);
+var date = (today.getMonth()+1) +'/'+today.getDate()+'/'+today.getFullYear();
+console.log(date);
 
 // ARRAY   
 let x = 0;
@@ -62,8 +62,9 @@ function saveTotal() {
    saved_Money[x] = displayValue;
    alert(`$ ${saved_Money[x]} has been saved to savedMoney array. Index= ${x}`);
    x++;
-   //Clear value from element.
+   //Clear form values from element.
    document.getElementById('money-form').reset();
+   document.getElementById('calculated-amount').innerHTML = "";
 }
 
 function display_totals(){
@@ -72,7 +73,7 @@ function display_totals(){
    for (var y=0; y<saved_Money.length; y++)
    
    {
-     e += "Element " + y + " = " + saved_Money[y] + "<br/>" + today + "<br/>" + "<hr/>";
+     e += "Element " + y + " = " + saved_Money[y] + "<br/>" + date + "<br/>" + "<hr/>";
      console.log(y + "This is Y's current index");
      console.log(saved_Money + " <=== Whats in the array");
    }
