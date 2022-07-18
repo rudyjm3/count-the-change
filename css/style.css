@@ -12,15 +12,26 @@ body{
    justify-content: center;
    align-items: center;
    height: 100vh;
-   background-color: rgb(201, 201, 201);
+   background: rgb(41,93,232);
+   background: linear-gradient(135deg, rgba(41,93,232,1) 0%, rgba(113,161,242,1) 41%, rgba(113,161,242,1) 57%, rgba(35,85,231,1) 89%);
 }
 .wrapper{
    display: flex;
    justify-content: center;
    /*align-items: center;*/
+   flex-wrap: wrap;
    width: 100%;
 }
-
+.page-title{
+   margin: 25px;
+   width: 100%;
+   text-align: center;
+   
+}
+.title{
+   color: #dfdfdf;
+   -webkit-text-stroke: 0.6px #333;
+}
 .left-col,.right-col{
    /*background-color: red;*/
    display: flex;
@@ -34,25 +45,26 @@ body{
    border-radius: 5px;
    border: 2px solid red;
    margin: 0 10px;
-   background-color: rgb(175, 175, 175);
+   background-color: rgb(231, 231, 231);
 }
 hr{
    margin: 20px 0;
    width: 90%;
 }
 button{
-   width: 80%;
+   width: 50%;
    height: 40px;
    margin: 15px 0;
-   font-weight: 600;
+   font-weight: 500;
    font-size: 20px;
    border-radius: 5px;
    padding: 5px;
+   line-height: 1;
 }
 .money-input-col{
    display:flex;
    flex-direction: column;
-   width: fit-content;
+   /*width: fit-content;*/
 }
 .total-output-col{
    display: flex;
@@ -135,11 +147,23 @@ input:focus{
    font-size: 35px;
    font-weight: 500;
    color: rgb(52, 189, 52);
+   -webkit-text-stroke: 2px black;
 }
 .currentcey-symbol{
    font-family: 'Sigmar One', cursive;
    font-size: 30px;
    font-weight: 500;
+}
+.calc-btn, .save-total-btn{
+   background-color:rgb(52, 189, 52);
+   color: white;
+}
+.save-total-btn, .display-totals-btn{
+   width: 55%;
+   color: white;
+}
+.display-totals-btn{
+   background-color: rgb(87, 107, 199);
 }
 /* HIDE INPUT SPANS FOR NOW */
 .penny-total,
