@@ -5,6 +5,10 @@
 //   }).format(n);
 
 
+// window.addEventListener('load', function () {
+//    alert("It's loaded!")
+//  })
+
 let penny = document.getElementById('penny').value * 0.01.toFixed(2);
    let nickle = document.getElementById('nickle').value * 0.05.toFixed(2);
    let dime = document.getElementById('dime').value * 0.10.toFixed(2);
